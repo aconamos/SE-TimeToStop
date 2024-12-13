@@ -60,6 +60,7 @@ namespace IngameScript
 
             public T GetValueAt(int idx)
             {
+                // The base Exception seems to be the most fitting one because other, more specific types are restricted by SE.
                 if (idx < 0 || idx >= _buf.Length) throw new Exception("Can't access index " + idx + " for array of size " + _buf.Length);
                 return _buf[idx];
             }
